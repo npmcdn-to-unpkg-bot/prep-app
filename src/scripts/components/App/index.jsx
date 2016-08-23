@@ -5,6 +5,7 @@ import SecondaryNav from '../../components/Navigation/SecondaryNav';
 import SocialNav from '../../components/Navigation/SocialNav';
 import MainNav from '../../components/Navigation/MainNav';
 import Banner from '../../components/Banner';
+import Search from '../../components/Search';
 
 import metadata from 'json!../../metadata.json';
 import logoImage from '../../../images/prep-logo.png';
@@ -46,6 +47,7 @@ class App extends React.Component {
               </div>
               <div className="column small-2 medium-8">
                 <MainNav />
+                <Search />
               </div>
             </div>
           </div>
