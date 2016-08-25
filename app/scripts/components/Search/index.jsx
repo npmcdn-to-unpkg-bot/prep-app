@@ -18,7 +18,12 @@ class Search extends React.Component {
   render() {
     return (
       <div className="c-search">
-        <div className="gcse-searchbox-only"></div>
+        <div className="viel"></div>
+        <div className="gcse-searchbox-only row">
+          <nav className="l-header-nav columns">
+            <input ref="search" placeholder="Search in prepdata.org"/>
+          </nav>
+        </div>
       </div>
     );
   }

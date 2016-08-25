@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-function MainNav() {
+function MainNav(props) {
   return (
     <nav className="c-nav -main">
       <ul>
@@ -16,6 +16,16 @@ function MainNav() {
         </li>
         <li>
           <Link activeClassName="-current" to="/insights">Insights</Link>
+        </li>
+        <li>
+          <a
+            // activeClassName="-current"
+            // to="/search"
+            className="light separator"
+            onClick={()=>props.toggleSearch()}
+          >
+              Search
+          </a>
         </li>
       </ul>
     </nav>

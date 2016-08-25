@@ -1,0 +1,28 @@
+.c-search {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+
+  .l-header-nav {
+
+    background-color: $dark-slate-blue-2;
+
+    input {
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
+  > .viel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $dark-slate-blue;
+    opacity: .7;
+  }
+}

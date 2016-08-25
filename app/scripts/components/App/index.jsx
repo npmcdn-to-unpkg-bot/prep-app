@@ -11,6 +11,12 @@ import metadata from 'json!../../metadata.json';
 import logoImage from '../../../images/prep-logo.png';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      search: false
+    };
+  }
 
   getData(key, value) {
     let data = null;
@@ -29,6 +35,10 @@ class App extends React.Component {
     return currentData;
   }
 
+  toggleSearch() {
+    this.setState({search: !this.state.search});
+  }
+
   render() {
     const currentData = this.getCurrentData();
     const isHomepage = (currentData.name === 'home');
@@ -37,6 +47,7 @@ class App extends React.Component {
 
     return (
       <div>
+        { this.state.search && <Search toggleSearch={this.toggleSearch}/> }
         <header className="l-header">
           <div className={`l-header-nav ${currentData.name === 'home' ? '-no-bg' : ''}`}>
             <div className="row align-middle">
@@ -46,8 +57,7 @@ class App extends React.Component {
                 </Link>
               </div>
               <div className="column small-2 medium-8">
-                <MainNav />
-                <Search />
+                <MainNav toggleSearch={()=>this.toggleSearch()}/>
               </div>
             </div>
           </div>

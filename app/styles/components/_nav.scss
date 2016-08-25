@@ -16,6 +16,22 @@
       line-height: 1;
       text-transform: uppercase;
 
+      .separator{
+        margin-left: 20px;
+
+        &:before {
+          pointer-events: none;
+          content: '';
+          position: relative;
+          left: -25px;
+          height: 40px;
+          border: 1px solid rgba(255, 255, 255, .3);
+          z-index: 1;
+        }
+      }
+
+      .light { font-weight: normal; }
+
       & > a {
         display: block;
         padding: $small-margin 0;
