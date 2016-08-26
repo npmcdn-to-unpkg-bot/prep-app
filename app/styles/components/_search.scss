@@ -7,12 +7,56 @@
   z-index: 9;
 
   .l-header-nav {
-
     background-color: $dark-slate-blue-2;
 
-    input {
-      background-color: transparent;
+    .search-container {
+      max-width: 71rem;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      height: 100%;
+
+      & > div {
+        width: 100%;
+      }
+    }
+
+    .gsc-search-box {
+      background-color: $dark-slate-blue-2;
+
+      & tbody > tr {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+
+    .gsst_a {
+      display: none;
+    }
+
+    #gsc-i-id1 {
+      background-color: $dark-slate-blue-2 !important;
+    }
+
+    .gsc-input {
+      order: 2;
+      flex-grow: 2;
+      background: none !important;
+      background-color: $dark-slate-blue-2 !important;
       border: 0;
+      color: $white;
+      height: rem(40);
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .gsc-input-box {
+      order: 1;
+      background-color: $dark-slate-blue-2 !important;
+      border: 0 !important;
+      height: rem(40);
+
     }
   }
 
@@ -24,5 +68,54 @@
     right: 0;
     background-color: $dark-slate-blue;
     opacity: .7;
+    z-index: -1;
   }
+
+  .close-button {
+    width: rem(15);
+    height: rem(15);
+    cursor: pointer;
+  }
+}
+
+.gssb_c {
+  position: fixed !important;
+  margin-top: rem(29);
+  background-color: $white;
+  max-height: rem(300);
+  overflow-y: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+
+
+  h3 {
+    margin: rem(40) rem(40) rem(12);
+    text-transform: uppercase;
+    font-size: $micro-font-size;
+    font-family: "montserrat";
+    opacity: .7;
+  }
+
+  .gsc-completion-container {
+
+    tr {
+      padding: rem(15) rem(40);
+      text-transform: capitalize;
+
+      .gssb_a {
+        font-weight: normal !important;
+        line-height: rem(26);
+        font-size: $normal-font-size;
+        padding: rem(15) rem(40);
+
+        &:hover {
+          background-color: $light-grey !important;
+          cursor: pointer !important;
+        }
+      }
+
+    }
+  }
+
 }

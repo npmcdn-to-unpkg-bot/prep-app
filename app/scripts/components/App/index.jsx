@@ -47,7 +47,8 @@ class App extends React.Component {
 
     return (
       <div>
-        { this.state.search && <Search toggleSearch={this.toggleSearch}/> }
+        { this.state.search && <Search toggleSearch={()=>this.toggleSearch()}/> }
+
         <header className="l-header">
           <div className={`l-header-nav ${currentData.name === 'home' ? '-no-bg' : ''}`}>
             <div className="row align-middle">
